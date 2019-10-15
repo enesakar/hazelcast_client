@@ -34,7 +34,9 @@ public class Client {
         while (true) {
             int randomKey = (int) random.nextInt(100_000);
             map.put("key" + randomKey, "value" + randomKey);
+            System.out.println("put success");
             map.get("key" + random.nextInt(100_000));
+            System.out.println("get success");
             if(randomKey % 10 == 0 ) {
                 System.out.println("map size:" + map.size());
             }
