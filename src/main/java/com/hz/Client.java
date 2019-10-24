@@ -16,9 +16,9 @@ public class Client {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("client start");
         ClientConfig config = new ClientConfig();
-        config.setGroupConfig(new GroupConfig("test2", "87196d3f1cc54c019362fccd6845a26a"));
+        config.setGroupConfig(new GroupConfig("new", "2cf827f2586f4838b6aa5013492ed55e"));
         config.setProperty("hazelcast.client.statistics.enabled","true");
-        config.setProperty(ClientProperty.HAZELCAST_CLOUD_DISCOVERY_TOKEN.getName(), "8oX4m76GI6tg5DJ0AVjmRFIijQa52ljnxRFUgqpv48RUi2vyYF");
+        config.setProperty(ClientProperty.HAZELCAST_CLOUD_DISCOVERY_TOKEN.getName(), "MOygAa5YpkOsbQ5iLfy5NJAmmWoj8QnHKrU69im9QqzuKVF1DD");
         config.setProperty(HazelcastCloudDiscovery.CLOUD_URL_BASE_PROPERTY.getName(), "https://optimusprime.test.hazelcast.cloud");
         HazelcastInstance client = HazelcastClient.newHazelcastClient(config);
         IMap<String, String> map = client.getMap("map");
